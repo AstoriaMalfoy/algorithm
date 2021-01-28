@@ -33,7 +33,7 @@
 * ###16个明文分组扩展成80个明文分组的过程
     * 这里约定M<sub>t</sub>为初始的16个明文分组，约定W<sub>t</sub>为扩展的80个明文分组，那么则有：
         * W<sub>t</sub> = M<sub>t</sub> (0<=t<=15)
-        * W<sub>t</sub> = (M<sub>t-3</sub>&bigoplus;M<sub>t-8</sub>&bigoplus;M<sub>t-14</sub>&bigoplus;M<sub>t-16</sub> (16<=t<=79)
+        * W<sub>t</sub> = (W<sub>t-3</sub>&bigoplus;W<sub>t-8</sub>&bigoplus;W<sub>t-14</sub>&bigoplus;W<sub>t-16</sub> (16<=t<=79)
 * ###摘要计算轮次
     * SHA1需要进行4轮次计算，每轮需要计算需要20个步骤，最后产生160位的摘要，并且这160位摘要需要保存在5个32位的变量中，分别为A,B,C,D,E,这5个变量的初始值为
         * A=0x67452301
