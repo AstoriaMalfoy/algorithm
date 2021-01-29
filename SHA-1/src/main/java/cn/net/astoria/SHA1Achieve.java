@@ -200,7 +200,7 @@ public class SHA1Achieve {
         public void setDataBlockSecond(byte[] dataBlockSecond) {
             this.dataBlockSecond = dataBlockSecond;
         }
-    }
+    }:
 
     /**
      * 对字符串计算SHA1值
