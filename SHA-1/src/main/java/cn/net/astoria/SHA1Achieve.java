@@ -16,6 +16,8 @@ public class SHA1Achieve {
     public static final UInt_32 FUNC_KEY_VALUE2 = UInt_32.getValue(0x6ED9EBA1);
     public static final UInt_32 FUNC_KEY_VALUE3 = UInt_32.getValue(0x8F1BBCDC);
     public static final UInt_32 FUNC_KEY_VALUE4 = UInt_32.getValue(0xCA62C1D6);
+
+
     /**
      *  存储运算中间变量以及最后的结果
      */
@@ -200,7 +202,7 @@ public class SHA1Achieve {
         public void setDataBlockSecond(byte[] dataBlockSecond) {
             this.dataBlockSecond = dataBlockSecond;
         }
-    }:
+    }
 
     /**
      * 对字符串计算SHA1值
@@ -258,7 +260,7 @@ public class SHA1Achieve {
                 LINK_VA = tempa.leftShiftCycle(5).ADD(calcuFunA()).ADD(e).ADD(linkGrouping[i]).ADD(FUNC_KEY_VALUE1).cutOverHighValue();
 //                LINK_VA =  (tempa<<5) + calcuFunA() + e + Integer.parseUnsignedInt(String.valueOf(linkGrouping[i]))  + FUNC_KEY_VALUE1;
             }else if(i<40){
-                LINK_VA = tempa.leftShiftCycle(5).ADD(calcuFunB()).ADD(e).ADD(linkGrouping[i]).ADD(FUNC_KEY_VALUE2).cutOverHighValue();
+                LINK_VA = tempa.leftShiftCycle(5).ADD   (calcuFunB()).ADD(e).ADD(linkGrouping[i]).ADD(FUNC_KEY_VALUE2).cutOverHighValue();
 //                LINK_VA =  (tempa<<5) + calcuFunB() + e + Integer.parseUnsignedInt(String.valueOf(linkGrouping[i])) + FUNC_KEY_VALUE2;
             }else if(i<60){
                 LINK_VA = tempa.leftShiftCycle(5).ADD(calcuFunC()).ADD(e).ADD(linkGrouping[i]).ADD(FUNC_KEY_VALUE3).cutOverHighValue();
